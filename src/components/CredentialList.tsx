@@ -26,9 +26,13 @@ export default function CredentialList() {
         if (!response.ok) throw new Error('Failed to fetch credentials.');
         const result = await response.json();
         setCredentials(result.data);
-      } catch (err: any) {
-        setError(err.message);
-      } finally {
+      } catch (err) {
+  if (err instanceof Error) {
+    setError(err.message);
+  } else {
+    setError('An unknown error occurred.');
+  }
+} finally {
         setIsLoading(false);
       }
     };
@@ -51,9 +55,13 @@ export default function CredentialList() {
       if (!response.ok) throw new Error('Failed to delete credential.');
       setCredentials(credentials.filter((cred) => cred._id !== credentialId));
       alert('Credential deleted successfully.');
-    } catch (err: any) {
-      alert(`Error: ${err.message}`);
-    }
+    } catch (err) {
+  if (err instanceof Error) {
+    alert(`Error: ${err.message}`);
+  } else {
+    alert('An unknown error occurred.');
+  }
+}
   };
 
   // --- NEW FUNCTION TO HANDLE THE UPDATED DATA FROM THE MODAL ---
