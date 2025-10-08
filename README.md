@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Madquick Digital Agency - Full-Stack Assignment
 
-## Getting Started
+## Project: Secure Vault Vault
 
-First, run the development server:
+### 🔗 [Live Demo](https://your-vercel-url-here.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Introduction
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is a full-stack personal password manager application, built from the ground up as a technical assignment for Madquick Digital Agency. It provides a secure, modern, and user-friendly interface for users to register, log in, and manage their sensitive credentials. The entire application is built with a focus on security, performance, and modern development practices.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Core Features
 
-## Learn More
+* **Secure User Authentication:** Complete user registration and login system powered by **NextAuth.js**, using a credentials-based provider and session management.
+* **Full CRUD Functionality:** Logged-in users have full Create, Read, Update, and Delete capabilities for their saved credentials.
+* **Password Encryption:** All user passwords (for both their account and their saved credentials) are securely hashed using **bcrypt** before being stored in the database.
+* **Protected API Routes:** The backend API is protected, ensuring that users can only access and modify their own data.
+* **Client-Side Tools:** Includes a robust, client-side password generator to help users create strong, unique passwords.
+* **Modern UI/UX:** A clean, responsive interface built with **Tailwind CSS**, featuring:
+    * Client-side navigation with Next.js App Router for a fast, seamless experience.
+    * Dynamic UI that updates in real-time without needing a page refresh (e.g., after deleting a credential).
+    * Clear user feedback for loading states and form submissions.
 
-To learn more about Next.js, take a look at the following resources:
+### Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Framework:** Next.js 15 (App Router)
+* **Language:** TypeScript
+* **Authentication:** NextAuth.js (Auth.js v5)
+* **Database:** MongoDB Atlas
+* **ODM:** Mongoose
+* **Styling:** Tailwind CSS
+* **Deployment:** Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### How to Run Locally
 
-## Deploy on Vercel
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/secure-vault.git](https://github.com/your-username/secure-vault.git)
+    cd secure-vault
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  **Set up environment variables:**
+    Create a file named `.env.local` in the root of the project and add the following variables:
+    ```
+    MONGODB_URI="your_mongodb_connection_string"
+    AUTH_SECRET="your_secret_key_for_nextauth"
+    ```
+
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:3000`.
+
+---
+Created by **Harsh Shinde**
