@@ -2,7 +2,7 @@
 
 ## Project: Secure Vault Vault
 
-### 🔗 [Live Demo](https://your-vercel-url-here.vercel.app)
+### 🔗 [Live Demo](madquick-digital-agency-assignment-p438-cfbjpcpmf.vercel.app)
 
 ---
 
@@ -60,3 +60,5 @@ This project is a full-stack personal password manager application, built from t
 
 ---
 Created by **Harsh Shinde**
+
+
